@@ -50,9 +50,25 @@ CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
 
 ## Build and run image
 
+### Manually
+
 ```
 docker build --tag flask-docker .
 docker run -d -p 5000:5000 flask-docker
+```
+
+### Compose dev
+
+Allows local development with volume and debug mode:
+
+```
+docker compose -f docker-compose-dev.yaml up
+```
+
+### Compose prod
+
+```
+docker compose up
 ```
 
 Open http://127.0.0.1:5000

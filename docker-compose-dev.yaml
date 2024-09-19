@@ -1,0 +1,13 @@
+
+services:
+  web:
+    extends:
+      file: docker-compose.yaml
+      service: web
+    environment:
+      FLASK_DEBUG: 1
+        #build: .
+        #ports:
+      #- "5000:5000"
+    volumes:
+      - .:/code
